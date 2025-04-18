@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+@theme {
+  --font-inter: var(--font-inter), sans-serif;
+}
+@layer components {
+  .card {
+    @apply relative;
+  }
+}
+body {
+  background-color: antiquewhite;
+  overflow: hidden;
+}
+
+.intro h1,
+.outro h1 {
+  font-size: 4vw;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-indent: 3em;
+  padding: 1em;
+  color: aliceblue;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  background-color: #1f1f1f;
+  overflow: hidden;
+}
+.intro,
+.outro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sticky-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1f1f1f;
+  color: aliceblue;
+}
+
+.cards-container {
+  position: relative;
+  width: 60%;
+  height: 60%;
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+.card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5em;
+  overflow: hidden;
+}
+.tag {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  padding: 0.5;
+  border-radius: 0.25;
+  background-color: #1f1f1f;
+  z-index: 1;
+}
+.tag p {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.loader-wrap-heading span {
+  overflow: hidden;
+  display: block;
+}
+.loader-wrap {
+  position: absolute;
+  z-index: 10;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+.loader-wrap svg {
+  position: absolute;
+  width: 100vw;
+  height: 110vh;
+}
+.loader-wrap .loader-wrap-heading {
+  font-size: 120px;
+  z-index: 20;
+  color: antiquewhite;
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-family: "Ogg";
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container h1 {
+  font-family: "Ogg";
+  font-weight: lighter;
+  font-size: 100px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  .loader-wrap svg {
+    width: 200vw;
+    margin-left: -50vw;
+  }
+  .loader-wrap .loader-wrap-heading,
+  .container h1 {
+    font-size: 60px;
+  }
+}
+@media (width >= 96rem) {
+  .container {
+    max-width: 100vw;
+  }
+}
